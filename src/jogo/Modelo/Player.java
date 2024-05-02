@@ -15,7 +15,7 @@ public class Player {
 
     }
     public void load(){
-        ImageIcon referencia = new ImageIcon("src/res/carro1.png");
+        ImageIcon referencia = new ImageIcon("util/personagem/frente1.png");
         imagem = referencia.getImage();
         altura = imagem.getHeight(null);
         largura = imagem.getWidth(null);
@@ -28,15 +28,23 @@ public class Player {
         int codigo = tecla.getKeyCode();
         if(codigo == KeyEvent.VK_UP){
             dy=-3;
+            ImageIcon referencia = new ImageIcon("util/personagem/costa1.png");
+            imagem = referencia.getImage();
         }
         if(codigo == KeyEvent.VK_DOWN){
             dy=3;
+            ImageIcon referencia = new ImageIcon("util/personagem/frente1.png");
+            imagem = referencia.getImage();
         }
         if(codigo == KeyEvent.VK_LEFT){
             dx=-3;
+            ImageIcon referencia = new ImageIcon("util/personagem/lado-esquerdo1.png");
+            imagem = referencia.getImage();
         }
         if(codigo == KeyEvent.VK_RIGHT){
             dx=3;
+            ImageIcon referencia = new ImageIcon("util/personagem/lado-direito1.png");
+            imagem = referencia.getImage();
         }
     }
     public void keyRelease(KeyEvent tecla){
