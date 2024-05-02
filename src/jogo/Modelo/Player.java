@@ -10,12 +10,12 @@ public class Player {
     private int altura,largura;
 
     public Player() {
-        this.x = 100;
-        this.y = 100;
+        this.x = 10;
+        this.y = 10;
 
     }
     public void load(){
-        ImageIcon referencia = new ImageIcon("src/res/carro.png");
+        ImageIcon referencia = new ImageIcon("src/res/carro1.png");
         imagem = referencia.getImage();
         altura = imagem.getHeight(null);
         largura = imagem.getWidth(null);

@@ -12,7 +12,7 @@ public class Casa {
         this.y = y;
     }
     public void load(){
-        ImageIcon referencia = new ImageIcon("src/res/casa.png");
+        ImageIcon referencia = new ImageIcon("src/res/casa1.png");
         imagem = referencia.getImage();
         this.largura = imagem.getWidth(null);
         this.altura = imagem.getHeight(null);

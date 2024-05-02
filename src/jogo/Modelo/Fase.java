@@ -6,14 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Fase extends JPanel implements ActionListener {
+    private int x,y;
     private Image fundo;
     private Player player;
-    private Casa casa;
     private Timer timer;
-
+    private List<Casa> casas;
+    private List<Rua> ruas;
 
 
     public Fase() {
@@ -26,29 +29,53 @@ public class Fase extends JPanel implements ActionListener {
         addKeyListener(new TecladoAdapter());
         timer = new Timer(5, this);
         timer.start();
-        inicializarCasas();
+        carregarObjetos();
     }
-    public void inicializarCasas() {
-        //int coordenadas[] = new int[4];
-        //casa = new ArrayList<Casa>();
-        casa = new Casa(200,200);
-        casa.load();
+    public void carregarObjetos() {
+        casas = new ArrayList<Casa>();
+        casas.add(new Casa(100,100));
+        casas.add(new Casa(300,300));
+        casas.add(new Casa(500,500));
 
+        ruas = new ArrayList<Rua>();
+        ruas.add(new Rua(130,130,4,0));
+        ruas.add(new Rua(130,260,4,1));
+        ruas.add(new Rua(260,130,4,2));
+        ruas.add(new Rua(260,260,4,3));
+
+    }
+    public void update(){
+        x += 0;
+        y += 0;
     }
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D graficos = (Graphics2D) g;
-        graficos.drawImage(fundo, 0, 0, null);
-        graficos.drawImage(player.getImagem(),player.getX(),player.getY(),this);
-        graficos.drawImage(casa.getImagem(),casa.getX(),casa.getY(),this);
+        graficos.drawImage(fundo, this.x, this.y, null);
+        graficos.drawImage(player.getImagem(), player.getX(), player.getY(), this);
 
+        for (Rua rua : ruas) {
+            rua.load();
+            AffineTransform identity = new AffineTransform();
+            AffineTransform trans = new AffineTransform();
+            trans.setTransform(identity);
+            trans.rotate( Math.toRadians(90*rua.getRotacao()),rua.getW()/2, rua.getH()/2 );
+            graficos.drawImage(rua.getImagem(), trans, this);
+        }
+        /*
+        for (Casa casa : casas) {
+            graficos.drawImage(casa.getImagem(), casa.getX(), casa.getY(), this);
+            casa.load();
+        }
+
+         */
         g.dispose();
 
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         player.update();
+        update();
         repaint();
     }
     private class TecladoAdapter extends KeyAdapter {
@@ -62,5 +89,3 @@ public class Fase extends JPanel implements ActionListener {
         }
     }
 }
-
-//teste
