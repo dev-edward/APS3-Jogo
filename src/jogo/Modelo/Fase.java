@@ -38,10 +38,10 @@ public class Fase extends JPanel implements ActionListener {
         casas.add(new Casa(500,500));
 
         ruas = new ArrayList<Rua>();
-        ruas.add(new Rua(130,130,4,0));
-        ruas.add(new Rua(130,260,4,1));
-        ruas.add(new Rua(260,130,4,2));
-        ruas.add(new Rua(260,260,4,3));
+        ruas.add(new Rua(130,130,4,3));
+        ruas.add(new Rua(130,260,4,2));
+        ruas.add(new Rua(260,130,4,0));
+        ruas.add(new Rua(260,260,4,1));
 
     }
     public void update(){
@@ -59,8 +59,11 @@ public class Fase extends JPanel implements ActionListener {
             AffineTransform identity = new AffineTransform();
             AffineTransform trans = new AffineTransform();
             trans.setTransform(identity);
-            trans.rotate( Math.toRadians(90*rua.getRotacao()),rua.getW()/2, rua.getH()/2 );
+            trans.translate(rua.getX(), rua.getY());
+            trans.rotate(Math.toRadians(90 * rua.getRotacao()), rua.getW() / 2, rua.getH() / 2);
+
             graficos.drawImage(rua.getImagem(), trans, this);
+
         }
         /*
         for (Casa casa : casas) {
