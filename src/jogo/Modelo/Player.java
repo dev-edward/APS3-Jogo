@@ -22,8 +22,8 @@ public class Player extends JComponent {
     public Player() {
         this.x = 260;
         this.y = 20;
-        this.velocidade = 3;
-
+        this.velocidade = 2;
+        temporizador();
 
     }
     public void load(){
