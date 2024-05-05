@@ -23,10 +23,81 @@ public class Mapa extends JPanel{
 
     public void carregarObjetos() {
         casas = new ArrayList<Casa>();
-        casas.add(new Casa(0,0,1));
-        casas.add(new Casa(910,0,1));
-        casas.add(new Casa(0,390,4));
-        casas.add(new Casa(0,910,1));
+        casas.add(new Casa(0*130,0,1));
+        casas.add(new Casa(7*130,0,1));
+        casas.add(new Casa(11*130,0,1));
+        casas.add(new Casa(14*130,0,1));
+        casas.add(new Casa(17*130,0,1));
+        casas.add(new Casa(19*130,0,4));
+
+        casas.add(new Casa(0*130,390,4));
+        casas.add(new Casa(26*130,390,1));
+        casas.add(new Casa(28*130,390,1));
+
+        casas.add(new Casa(19*130,520,1));
+        casas.add(new Casa(22*130,520,1));
+
+        casas.add(new Casa(19*130,780,1));
+        casas.add(new Casa(22*130,780,1));
+
+        casas.add(new Casa(0*130,910,1));
+        casas.add(new Casa(14*130,910,1));
+        casas.add(new Casa(17*130,910,1));
+        casas.add(new Casa(19*130,910,4));
+        casas.add(new Casa(22*130,910,1));
+
+        casas.add(new Casa(26*130,1170,4));
+        casas.add(new Casa(28*130,1170,1));
+
+        casas.add(new Casa(14*130,1300,1));
+        casas.add(new Casa(17*130,1300,4));
+
+        casas.add(new Casa(0*130,1430,4));
+
+        casas.add(new Casa(10*130,1560,1));
+        casas.add(new Casa(14*130,1560,1));
+        casas.add(new Casa(17*130,1560,1));
+        casas.add(new Casa(21*130,1560,1));
+        casas.add(new Casa(25*130,1560,1));
+
+        casas.add(new Casa(21*130,1950,1));
+
+        casas.add(new Casa(0*130,2210,2));
+        casas.add(new Casa(21*130,2210,1));
+
+        casas.add(new Casa(0*130,2430,2));
+        casas.add(new Casa(21*130,2430,1));
+        casas.add(new Casa(28*130,2430,2));
+
+        casas.add(new Casa(28*130,2600,2));
+
+        casas.add(new Casa(21*130,2730,1));
+
+        casas.add(new Casa(28*130,2860,2));
+
+        casas.add(new Casa(0*130,2990,2));
+        casas.add(new Casa(7*130,2990,2));
+        casas.add(new Casa(14*130,2990,1));
+        casas.add(new Casa(21*130,2990,1));
+
+        casas.add(new Casa(0*130,3120,2));
+        casas.add(new Casa(7*130,3120,2));
+        casas.add(new Casa(28*130,3120,2));
+
+        casas.add(new Casa(0*130,3250,2));
+        casas.add(new Casa(7*130,3250,2));
+
+        casas.add(new Casa(21*130,3380,1));
+
+        casas.add(new Casa(22*130,3510,1));
+
+        casas.add(new Casa(3*130,3640,1));
+        casas.add(new Casa(7*130,3640,1));
+        casas.add(new Casa(10*130,3640,1));
+        casas.add(new Casa(14*130,3640,1));
+
+
+
 
         ruas = new ArrayList<Rua>();
         //linha1
@@ -392,15 +463,50 @@ public class Mapa extends JPanel{
         ruas.add(new Rua(23*130,3770,1,1));
         ruas.add(new Rua(27*130,3770,1,1));
 
-
-
-
         objetos = new ArrayList<OutrosObjetos>();
-        objetos.add(new OutrosObjetos(390,0,8, 0));
-        objetos.add(new OutrosObjetos(390,390,1,1));
-        objetos.add(new OutrosObjetos(910,520,8,0));
-        objetos.add(new OutrosObjetos(910,780,8,0));
-        objetos.add(new OutrosObjetos(390,910,9,0));
+
+        //campo-futebol
+        objetos.add(new OutrosObjetos(3*130,390,1,0));
+        objetos.add(new OutrosObjetos(10*130,1950,1,0));
+        objetos.add(new OutrosObjetos(14*130,1950,1,0));
+        objetos.add(new OutrosObjetos(25*130,1950,1,0));
+        objetos.add(new OutrosObjetos(3*130,3120,1,0));
+        //condominio
+        objetos.add(new OutrosObjetos(12*130,0,3, 0));
+        //hospital
+        casas.add(new Casa(5*130,1430,4));
+        //mansao
+        objetos.add(new OutrosObjetos(4*130,2470,5, 0));
+        objetos.add(new OutrosObjetos(11*130,2470,5, 0));
+        //piscina
+        objetos.add(new OutrosObjetos(10*130,0,6, 0));
+        objetos.add(new OutrosObjetos(13*130,0,6, 0));
+        objetos.add(new OutrosObjetos(24*130,520,6, 0));
+        objetos.add(new OutrosObjetos(12*130,2080,7, 0));
+        objetos.add(new OutrosObjetos(13*130,2080,7, 2));
+        objetos.add(new OutrosObjetos(0*130,2340,6, 0));
+        objetos.add(new OutrosObjetos(0*130,2600,6, 0));
+        //predio
+        objetos.add(new OutrosObjetos(3*130,0,8, 0));
+        objetos.add(new OutrosObjetos(7*130,520,8, 0));
+        objetos.add(new OutrosObjetos(7*130,780,8, 0));
+        objetos.add(new OutrosObjetos(7*130,1040,8, 0));
+        objetos.add(new OutrosObjetos(28*130,1560,8, 0));
+        objetos.add(new OutrosObjetos(0*130,1820,8, 0));
+        objetos.add(new OutrosObjetos(28*130,1820,8, 0));
+        objetos.add(new OutrosObjetos(18*130,2080,8, 0));
+        objetos.add(new OutrosObjetos(28*130,2080,8, 0));
+        objetos.add(new OutrosObjetos(25*130,2470,8, 0));
+        objetos.add(new OutrosObjetos(0*130,2730,8, 0));
+        objetos.add(new OutrosObjetos(18*130,3120,8, 0));
+        objetos.add(new OutrosObjetos(17*130,3510,8, 2));
+        objetos.add(new OutrosObjetos(28*130,3510,8, 0));
+        objetos.add(new OutrosObjetos(0*130,3640,8, 3));
+        //solar
+        objetos.add(new OutrosObjetos(3*130,910,9,0));
+        objetos.add(new OutrosObjetos(10*130,3120,9,0));
+        objetos.add(new OutrosObjetos(24*130,3510,9,0));
+
 
     }
 

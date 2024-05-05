@@ -67,9 +67,102 @@ public class Container extends JFrame implements ActionListener {
     }
     private void CarregarArvores(){
         arvores = new ArrayList<Arvore>();
-        arvores.add(new Arvore(650,390,1));
-        arvores.add(new Arvore(650,650,1));
-        arvores.add(new Arvore(0,1170,2));
+
+        arvores.add(new Arvore(5*130,390,1));
+        arvores.add(new Arvore(22*130,390,1));
+        arvores.add(new Arvore(23*130,390,1));
+        arvores.add(new Arvore(24*130,390,1));
+
+        arvores.add(new Arvore(5*130,650,1));
+        arvores.add(new Arvore(12*130,650,2));
+        arvores.add(new Arvore(13*130,650,1));
+        arvores.add(new Arvore(14*130,650,2));
+        arvores.add(new Arvore(15*130,650,1));
+
+        arvores.add(new Arvore(12*130,780,1));
+        arvores.add(new Arvore(24*130,780,1));
+
+        arvores.add(new Arvore(12*130,910,2));
+
+        arvores.add(new Arvore(12*130,1040,1));
+
+        arvores.add(new Arvore(0*130,1170,2));
+        arvores.add(new Arvore(12*130,1170,2));
+        arvores.add(new Arvore(15*130,1170,1));
+
+        arvores.add(new Arvore(12*130,1300,1));
+        arvores.add(new Arvore(20*130,1300,1));
+        arvores.add(new Arvore(22*130,1300,1));
+        arvores.add(new Arvore(24*130,1300,1));
+
+        arvores.add(new Arvore(4*130,1430,1));
+
+        arvores.add(new Arvore(4*130,1560,1));
+        arvores.add(new Arvore(12*130,1560,2));
+        arvores.add(new Arvore(13*130,1560,2));
+
+        arvores.add(new Arvore(0*130,1690,2));
+        arvores.add(new Arvore(4*130,1690,1));
+        arvores.add(new Arvore(19*130,1690,1));
+
+        arvores.add(new Arvore(25*130,1820,1));
+        arvores.add(new Arvore(26*130,1820,1));
+
+        arvores.add(new Arvore(12*130,1950,1));
+        arvores.add(new Arvore(13*130,1950,1));
+        arvores.add(new Arvore(24*130,1950,1));
+
+        arvores.add(new Arvore(24*130,2080,1));
+
+        arvores.add(new Arvore(3*130,2210,1));
+        arvores.add(new Arvore(24*130,2210,1));
+
+        arvores.add(new Arvore(1*130,2340,2));
+        arvores.add(new Arvore(3*130,2340,1));
+
+        arvores.add(new Arvore(3*130,2470,1));
+        arvores.add(new Arvore(10*130,2470,1));
+        arvores.add(new Arvore(24*130,2470,1));
+
+        arvores.add(new Arvore(1*130,2600,2));
+        arvores.add(new Arvore(3*130,2600,1));
+        arvores.add(new Arvore(10*130,2600,1));
+        arvores.add(new Arvore(24*130,2600,1));
+        arvores.add(new Arvore(28*130,2600,1));
+        arvores.add(new Arvore(29*130,2600,1));
+
+        arvores.add(new Arvore(3*130,2730,1));
+        arvores.add(new Arvore(10*130,2730,1));
+        arvores.add(new Arvore(21*130,2730,2));
+        arvores.add(new Arvore(22*130,2730,2));
+
+        arvores.add(new Arvore(3*130,2860,1));
+        arvores.add(new Arvore(4*130,2860,1));
+        arvores.add(new Arvore(5*130,2860,1));
+        arvores.add(new Arvore(7*130,2860,1));
+        arvores.add(new Arvore(8*130,2860,1));
+        arvores.add(new Arvore(10*130,2860,1));
+        arvores.add(new Arvore(11*130,2860,1));
+        arvores.add(new Arvore(12*130,2860,1));
+        arvores.add(new Arvore(14*130,2860,1));
+        arvores.add(new Arvore(155*130,2860,1));
+        arvores.add(new Arvore(28*130,2860,1));
+        arvores.add(new Arvore(29*130,2860,1));
+
+        arvores.add(new Arvore(5*130,3120,1));
+        arvores.add(new Arvore(28*130,3120,1));
+        arvores.add(new Arvore(29*130,3120,1));
+
+        arvores.add(new Arvore(6*130,3380,2));
+        arvores.add(new Arvore(14*130,3380,2));
+
+        arvores.add(new Arvore(5*130,3770,2));
+        arvores.add(new Arvore(6*130,3770,2));
+        arvores.add(new Arvore(12*130,3770,2));
+        arvores.add(new Arvore(13*130,3770,2));
+        arvores.add(new Arvore(28*130,3770,2));
+        arvores.add(new Arvore(29*130,3770,2));
+
         for(Arvore arvore : arvores){
             arvore.setBounds(this.getBounds());
             arvore.load();
