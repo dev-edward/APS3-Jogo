@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Rua extends JPanel {
+public class Rua{
     private Image imagem;
     private int x, y, t, r;
     private String caminho;
@@ -50,7 +50,6 @@ public class Rua extends JPanel {
     public int getX() {
         return x;
     }
-
     public int getY() {
         return y;
     }

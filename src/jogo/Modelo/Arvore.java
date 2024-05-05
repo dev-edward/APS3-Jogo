@@ -1,14 +1,15 @@
 package jogo.Modelo;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class Casa {
+public class Arvore extends JComponent{
     private Image imagem;
     private int x,y,t;
     private int largura,altura;
     private String caminho;
 
-    public Casa(int x, int y,int t){
+    public Arvore(int x, int y,int t){
         this.x = x;
         this.y = y;
         this.t = t;
@@ -16,19 +17,13 @@ public class Casa {
     public void load(){
         switch (t) {
             case 1:
-                caminho = "src/res/casa1.png";
+                caminho = "src/res/arvore1.png";
                 break;
             case 2:
-                caminho = "src/res/casa2.png";
-                break;
-            case 3:
-                caminho = "src/res/casa3.png";
-                break;
-            case 4:
-                caminho = "src/res/casa4.png";
+                caminho = "src/res/arvore2.png";
                 break;
             default:
-                caminho = "src/res/rua1.png";
+                caminho = "src/res/arvore1.png";
         }
         ImageIcon referencia = new ImageIcon(caminho);
         imagem = referencia.getImage();
@@ -39,15 +34,11 @@ public class Casa {
 
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public Image getImagem() {
-        return imagem;
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D graficos = (Graphics2D) g;
+        graficos.drawImage(this.imagem, this.x, this.y, this);
+        g.dispose();
     }
 }
